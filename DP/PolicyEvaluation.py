@@ -44,6 +44,8 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
     k=0
     diff=1
     errors=[]
+    historicalCheck=[0,10]
+    historical=[]
     while (diff>theta):
         newV=np.zeros(env.nS)
         for s in range(env.nS):
@@ -59,18 +61,20 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
         diff=np.abs(np.subtract(V, newV)).mean()  
         errors+=[diff]
         V=newV
+        if k in historicalCheck:
+            historical+=[V]
         k+=1
         print('iteration = ',k,'  delta = %.3e'%diff)
       
     
-    return (np.array(V),errors)
+    return (np.array(V),errors,historical)
 
 
 # =============================================================================
 # Evaluate a random policy
 # =============================================================================
 random_policy = np.ones([env.nS, env.nA]) / env.nA
-v,errors = policy_eval(random_policy, env)
+v,errors,historical = policy_eval(random_policy, env)
 
 
 # =============================================================================
@@ -98,3 +102,27 @@ pl.ylabel('L1 difference of deltas')
 pl.title('evolution of the Value function deltas at each iteration')
 pl.savefig('PolicyEvaluation.png')
 pl.show()
+
+
+fig=pl.figure(figsize=(12,10))
+ax=fig.add_subplot(141)
+ax.imshow(historical[0].reshape(env.shape))
+pl.title('iteration 0')
+
+ax=fig.add_subplot(142)
+ax.imshow(historical[1].reshape(env.shape))
+pl.title('iteration 10')
+
+ax=fig.add_subplot(143)
+ax.imshow(v.reshape(env.shape))
+pl.title('final iteration - {}'.format(len(errors)))
+
+ax=fig.add_subplot(144)
+ax.imshow(expected_v.reshape(env.shape))
+pl.title('expected value function')
+
+pl.savefig('EvolutionPolicyEvaluation')
+
+pl.legend()
+pl.show()
+

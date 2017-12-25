@@ -104,7 +104,7 @@ pl.savefig('PolicyEvaluation.png')
 pl.show()
 
 
-fig=pl.figure(figsize=(12,10))
+fig=pl.figure(figsize=(12,5))
 ax=fig.add_subplot(141)
 ax.imshow(historical[0].reshape(env.shape))
 pl.title('iteration 0')
@@ -121,7 +121,7 @@ ax=fig.add_subplot(144)
 ax.imshow(expected_v.reshape(env.shape))
 pl.title('expected value function')
 
-pl.savefig('EvolutionPolicyEvaluation')
+pl.savefig('EvolutionPolicyEvaluation.png')
 
 pl.legend()
 pl.show()

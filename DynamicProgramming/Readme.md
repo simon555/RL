@@ -10,5 +10,5 @@ Below, we track the evolution of the differences between the updates of the Valu
 As final output, we get the value function on the gridworld : 
 
 
-<img src="https://github.com/simon555/RL/blob/master/DynamicProgramming/PolicyEvaluation/EvolutionPolicyEvaluation.png " width="48">
+<img src="https://github.com/simon555/RL/blob/master/DynamicProgramming/PolicyEvaluation/EvolutionPolicyEvaluation.png " width="400">
 

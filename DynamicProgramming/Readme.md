@@ -9,4 +9,4 @@ Below, we track the evolution of the differences between the updates of the Valu
 
 As final output, we get the value function on the gridworld : 
 
-![alt ](https://github.com/simon555/RL/blob/master/DynamicProgramming/PolicyEvaluation/EvolutionPolicyEvaluation.png = 200*150)
+![alt ](https://github.com/simon555/RL/blob/master/DynamicProgramming/PolicyEvaluation/EvolutionPolicyEvaluation.png = 200x150)

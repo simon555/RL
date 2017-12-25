@@ -66,12 +66,23 @@ def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):
     return (np.array(V),errors)
 
 
+# =============================================================================
+# Evaluate a random policy
+# =============================================================================
 random_policy = np.ones([env.nS, env.nA]) / env.nA
 v,errors = policy_eval(random_policy, env)
 
+
+# =============================================================================
+# Checking the results
+# =============================================================================
 expected_v = np.array([0, -14, -20, -22, -14, -18, -20, -20, -20, -20, -18, -14, -22, -20, -14, 0])
 np.testing.assert_array_almost_equal(v, expected_v, decimal=2)
 
+
+# =============================================================================
+# Display the results
+# =============================================================================
 print("computed Value Function:")
 print(v.reshape(env.shape))
 print("")
@@ -85,3 +96,5 @@ pl.plot(errors)
 pl.xlabel('iteration')
 pl.ylabel('L1 difference of deltas')
 pl.title('evolution of the Value function deltas at each iteration')
+pl.savefig('PolicyEvaluation.png')
+pl.show()

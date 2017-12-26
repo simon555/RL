@@ -18,6 +18,15 @@ As final output, we get the value function on the gridworld :
 ![alt text](https://github.com/simon555/RL/blob/master/DynamicProgramming/PolicyIteration/PolicyIteration.png)
 
 
+## Value Iteration
+Implementation of the Value Iteration Algorithm, below the variation of the computed value function over iterations.
+![alt text](https://github.com/simon555/RL/blob/master/DynamicProgramming/ValueIteration/errorValueIteration.png)
+
+As final output, we get the value function on the gridworld : 
+![alt text](https://github.com/simon555/RL/blob/master/DynamicProgramming/ValueIteration/Valueteration.png)
+
+
+
 
 
 

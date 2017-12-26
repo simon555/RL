@@ -23,7 +23,7 @@ Implementation of the Value Iteration Algorithm, below the variation of the comp
 ![alt text](https://github.com/simon555/RL/blob/master/DynamicProgramming/ValueIteration/errorValueIteration.png)
 
 As final output, we get the value function on the gridworld : 
-![alt text](https://github.com/simon555/RL/blob/master/DynamicProgramming/ValueIteration/Valueteration.png)
+![alt text](https://github.com/simon555/RL/blob/master/DynamicProgramming/ValueIteration/ValueIteration.png)
 
 
 

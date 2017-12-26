@@ -75,7 +75,7 @@ def policy_improvement(env, policy_eval_fn=policy_eval, discount_factor=1.0):
         policyStable=True
         error=0
         V=policy_eval_fn(policy,env)
-        historical+=[V]
+        historical+=[np.copy(V)]
         for s in range(env.nS):
             b=np.argmax(policy[s])
             policy[s]=computeTerm(env,discount_factor,V,s)

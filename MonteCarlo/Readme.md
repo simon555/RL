@@ -7,28 +7,28 @@ Using this method, we track the variations of the computed means that estimate t
 
   ## Using 10K iterations ##
 
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/10K_evolutionMean.png)
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/10%2C000%20Steps%20(No%20Usable%20Ace).png
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/10K_evolutionMean.png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/10%2C000%20Steps%20(No%20Usable%20Ace).png
 )
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarlPrediction/10%2C000%20Steps%20(Usable%20Ace).png
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/10%2C000%20Steps%20(Usable%20Ace).png
 )
 
   ## using 500K iterations ##
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/500K_evolutionMean.png)
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/500%2C000%20Steps%20(No%20Usable%20Ace).png
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/500K_evolutionMean.png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/500%2C000%20Steps%20(No%20Usable%20Ace).png
 )
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarlPrediction/500%2C000%20Steps%20(Usable%20Ace).png
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloPrediction/500%2C000%20Steps%20(Usable%20Ace).png
 )
 
 
 
 ## Monte Carlo Control - epsilon greedy
-Samely as before, we use the Monte Carlo method to approximate the optimal policy. To do this, we compute the Q function using Monte Carlo estimators. At the end of the training, the algorithm converges towards the optimal policy, and allows us to plot the optimal value fonction : 
+Samely as before, we use the Monte Carlo method to approximate the optimal policy. To do this, we compute the Q function using Monte Carlo estimators. At the end of the training, the algorithm converges towards the optimal policy, and allows us to plot the optimal value fonction. Below we plot the evolution of the variation of the computed means that estimate the Q function, and the V function plotted as a surface.
 
   ## Using 500K iterations ##
 
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/5000K_evolutionMean.png)
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function%20(No%20Usable%20Ace).png)
-![alt text](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function%20(Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/500K_evolutionMean.png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function%20(No%20Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function%20(Usable%20Ace).png)
 
 

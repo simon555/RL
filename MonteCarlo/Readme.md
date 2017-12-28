@@ -27,13 +27,35 @@ Samely as before, we use the Monte Carlo method to approximate the optimal polic
 
   ## Using 500K iterations ##
 
-![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/500K_evolutionMean.png)
-![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function%20(No%20Usable%20Ace).png)
-![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function%20(Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/evolution_500K_evolutionMean.png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function_500K%20(No%20Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function_500K%20(Usable%20Ace).png)
 
 We can also display the final policy found, 0 meaning 'sit', and 1 'hit'.
-![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/500K%20(No%20Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/policy_500K%20(No%20Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/policy_500K%20(Usable%20Ace).png)
 
-![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/500K%20(Usable%20Ace).png)
+
+ ## Using 1M iterations ##
+
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/evolution_1M_evolutionMean.png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/1M_evolutionMean.png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function_1M%20(No%20Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function_1M%20_(Usable%20Ace).png)
+
+We can also display the final policy found, 0 meaning 'sit', and 1 'hit'.
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/policy_1M%20(No%20Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/policy_1M%20(Usable%20Ace).png)
+
+
+  ## Using 5M iterations ##
+
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/evolution_5M_evolutionMean.png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function_5M%20(No%20Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function_5M%20(Usable%20Ace).png)
+
+We can also display the final policy found, 0 meaning 'sit', and 1 'hit'.
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/policy_5M%20(No%20Usable%20Ace).png)
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/policy_5M%20(Usable%20Ace).png)
 
 

@@ -31,4 +31,9 @@ Samely as before, we use the Monte Carlo method to approximate the optimal polic
 ![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function%20(No%20Usable%20Ace).png)
 ![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/Optimal%20Value%20Function%20(Usable%20Ace).png)
 
+We can also display the final policy found, 0 meaning 'sit', and 1 'hit'.
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/500K%20(No%20Usable%20Ace).png)
+
+![](https://github.com/simon555/RL/blob/master/MonteCarlo/MonteCarloControl-eGreedy/500K%20(Usable%20Ace).png)
+
 

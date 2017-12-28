@@ -143,45 +143,45 @@ def plot_results(evolution,index):
     pl.show()
     
 #on 500K iterations
-Q, policy,evolution = mc_control_epsilon_greedy(env, num_episodes=500000, epsilon=0.1)
+Q500K, policy,evolution500K = mc_control_epsilon_greedy(env, num_episodes=500000, epsilon=0.1)
 # For plotting: Create value function from action-value function
 # by picking the best action at each state
-V = defaultdict(float)
-for state, actions in Q.items():
+V500K = defaultdict(float)
+for state, actions in Q500K.items():
     action_value = np.max(actions)
-    V[state] = action_value
-plotting.plot_value_function(V, title="Optimal Value Function")
+    V500K[state] = action_value
+plotting.plot_value_function(V500K, title="Optimal Value Function_500K")
 
-plot_results(evolution,'500K')
-
-plot_policy(Q,policy,'500K')
+plot_results(evolution500K,'evolution_500K')
+plot_policy(Q500K,policy,'policy_500K')
 
 
 #on 1M iterations
-Q, policy,evolution = mc_control_epsilon_greedy(env, num_episodes=1000000, epsilon=0.1)
+Q1M, policy,evolution1M = mc_control_epsilon_greedy(env, num_episodes=1000000, epsilon=0.1)
 # For plotting: Create value function from action-value function
 # by picking the best action at each state
-V = defaultdict(float)
-for state, actions in Q.items():
+V1M = defaultdict(float)
+for state, actions in Q1M.items():
     action_value = np.max(actions)
-    V[state] = action_value
-plotting.plot_value_function(V, title="Optimal Value Function_1M")
+    V1M[state] = action_value
+plotting.plot_value_function(V1M, title="Optimal Value Function_1M")
 
-plot_results(evolution,'policy_1M')
+plot_results(evolution1M,'evolution_1M')
 
-plot_policy(Q,policy,'policy_1M')
+plot_policy(Q1M,policy,'policy_1M')
 
 
 #on 5M iterations
-Q, policy,evolution = mc_control_epsilon_greedy(env, num_episodes=5000000, epsilon=0.1)
+Q5M, policy,evolution5M = mc_control_epsilon_greedy(env, num_episodes=5000000, epsilon=0.1)
 # For plotting: Create value function from action-value function
 # by picking the best action at each state
-V = defaultdict(float)
-for state, actions in Q.items():
+V5M = defaultdict(float)
+for state, actions in Q5M.items():
     action_value = np.max(actions)
-    V[state] = action_value
-plotting.plot_value_function(V, title="Optimal Value Function_5M")
+    V5M[state] = action_value
+plotting.plot_value_function(V5M, title="Optimal Value Function_5M")
 
-plot_results(evolution,'policy_5M')
+plot_results(evolution5M,'evolution_5M')
 
-plot_policy(Q,policy,'policy_5M')
+plot_policy(Q5M,policy,'policy_5M')
+

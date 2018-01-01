@@ -68,6 +68,7 @@ def plot_episode_stats(stats, smoothing_window=10, noshow=False):
     plt.xlabel("Episode")
     plt.ylabel("Episode Length")
     plt.title("Episode Length over Time")
+    plt.savefig('sarsa_length.png')
     if noshow:
         plt.close(fig1)
     else:
@@ -80,6 +81,7 @@ def plot_episode_stats(stats, smoothing_window=10, noshow=False):
     plt.xlabel("Episode")
     plt.ylabel("Episode Reward (Smoothed)")
     plt.title("Episode Reward over Time (Smoothed over window size {})".format(smoothing_window))
+    plt.savefig('sarsa_reward.png')
     if noshow:
         plt.close(fig2)
     else:
@@ -91,6 +93,7 @@ def plot_episode_stats(stats, smoothing_window=10, noshow=False):
     plt.xlabel("Time Steps")
     plt.ylabel("Episode")
     plt.title("Episode per time step")
+    plt.savefig('sarsa_episodeTimeStep.png')
     if noshow:
         plt.close(fig3)
     else:

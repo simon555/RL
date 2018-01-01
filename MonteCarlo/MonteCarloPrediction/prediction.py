@@ -6,7 +6,6 @@ import numpy as np
 import sys
 import matplotlib.pyplot as pl
 from collections import defaultdict
-
 from envs.blackjack import BlackjackEnv
 from lib import plotting
 import envs
@@ -60,7 +59,8 @@ def mc_prediction(policy, env, num_episodes, discount_factor=1.0):
                 delta+=np.abs(V[state]-newMean)
                 V[state]=newMean
         evolution+=[delta]
-        print(k)      
+        print('\r ',k,flush=True)      
+        sys.stdout.flush()
     return (V,evolution)
 
 

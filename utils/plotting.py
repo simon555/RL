@@ -22,6 +22,7 @@ def plot_cost_to_go_mountain_car(env, estimator, num_tiles=20):
     ax.set_zlabel('Value')
     ax.set_title("Mountain \"Cost To Go\" Function")
     fig.colorbar(surf)
+    plt.savefig('costToGo.png')
     plt.show()
 
 

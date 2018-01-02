@@ -7,7 +7,7 @@ import pandas as pd
 import sys
 
 from collections import defaultdict
-from envs.cliff_walking import CliffWalkingEnv
+from envs.windy_gridworld import WindyGridworldEnv
 from utils import plotting
 
 
@@ -97,7 +97,7 @@ def q_learning(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):
     return Q, stats
 
 
-Q, stats = q_learning(env, 1000)
+Q, stats = q_learning(env, 200)
 
 
 

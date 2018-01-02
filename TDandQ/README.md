@@ -16,3 +16,5 @@ This method is similar to SARSA but we use a different update rule for the estim
 ![](https://github.com/simon555/RL/blob/master/TDandQ/QLearning/QLearning_length.png)
 
 
+# Comments
+In this exemple, it seems that SARSA is doing better : the Q learning method gives more noisy convergence even though they both tend to find the optimal policy after 200 iterations. Also, SARSA tends to be more fast.

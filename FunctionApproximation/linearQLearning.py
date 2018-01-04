@@ -206,7 +206,7 @@ estimator = Estimator()
 # Note: For the Mountain Car we don't actually need an epsilon > 0.0
 # because our initial estimate for all states is too "optimistic" which leads
 # to the exploration of all states.
-stats = q_learning(env, estimator, 1000, epsilon=0.0)
+stats = q_learning(env, estimator, 10000, epsilon=0.0)
 
 plotting.plot_cost_to_go_mountain_car(env, estimator)
 plotting.plot_episode_stats(stats, smoothing_window=25)

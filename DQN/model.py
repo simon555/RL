@@ -15,50 +15,47 @@ import torch.optim as optim
 
 
 class QEstimator(nn.Module):
-    def __init__(self,inputDim=2,outputAction=3,learningRate=0.001):
+    def __init__(self,
+                 inputFeatures=1,
+                 outputAction=4,
+                 learningRate=0.00025):
         
         super(QEstimator, self).__init__()
-
+        self.codeDim=7*7*64
+        self.outputAction=outputAction
+        self.inputFeatures=inputFeatures
+        self.learningRate=learningRate
+        
         useCuda=torch.cuda.is_available()
         self.useCuda=useCuda
         
-        self.Dense1=nn.Linear(inputDim,8)
-        self.Dense2=nn.Linear(8,16)
-        self.Dense3=nn.Linear(16,32)
-        self.Dense4=nn.Linear(32,64)
         
-        self.Dense5=nn.Linear(64,32)
-        self.Dense6=nn.Linear(32,16)
-        self.Dense7=nn.Linear(16,8)
-        self.Dense8=nn.Linear(8,outputAction)        
+        self.Conv1=nn.Conv2d(self.inputFeatures,32,8,stride=4)
+        self.Conv2=nn.Conv2d(32,64,4,stride=2)
+        self.Conv3=nn.Conv2d(64,64,3,stride=1)
+        self.Dense1=nn.Linear(self.codeDim,512)
+        self.Dense2=nn.Linear(512,self.outputAction)  
         
                    
         if (self.useCuda):
             self.cuda()             
             
-        print('use CUDA : ',self.useCuda)
-        
-        
-        
-        
-        
+        print('use CUDA : ',self.useCuda) 
         print('model loaded')
         
 
  
 
     def forward(self,observation):
-        
-        x=self.Dense1(observation)
-        x=self.Dense2(x)
-        x=self.Dense3(x)
-        x=self.Dense4(x)
-        x=self.Dense5(x)
-        x=self.Dense6(x)
-        x=self.Dense7(x)
-        x=self.Dense8(x)
+        x=self.Conv1(observation)
+        x=self.Conv2(x)
+        x=self.Conv3(x)
+        x=x.view(x.size()[0],-1) 
+        x=self.Dense1(x)
+        x=self.Dense2(x)      
                  
         return(x)
+
         
         
     

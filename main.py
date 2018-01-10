@@ -5,16 +5,12 @@ Created on Mon Dec 25 12:43:50 2017
 
 @author: sebbaghs
 """
-import time
-
-
 import gym
-env = gym.make('GridWorld')
+env = gym.make('CartPole-v0')
 env.reset()
-for i in range(1000):
-    env.render()
-    env.step()
-    
-    time.sleep(0.01)
-    
-    
+for _ in range(1000):
+    done=False
+    env.reset()
+    for i in range(100):
+        env.render()
+        _,_,done,_=env.step(env.action_space.sample()) # take a random action
